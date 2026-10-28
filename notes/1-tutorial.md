@@ -59,3 +59,49 @@ Declaring a standard format by fiat eliminates a lot of pointless
 debate about trivia and, more importantly, enables a variety of
 automated source code transformation 
 that would be infeasible if arbitrary formatting were allowed."
+
+7. For loop:
+```go
+for initialization (optional); condition; post {
+    // zero or more statements
+}
+```
+around the 3 components of the loop - parenthesis not used - braces are
+mandatory, and opening brace must be in the same line as the post statement.
+
+ - Optional initialization statement is executed before the loop starts.
+ - condition is a boolean expression, if evaluated true, the loop executes.
+ - The post statement is executed after the body of loop executes - then condition is evaluated again and so on...
+ - loop ends when the condition is false.
+
+If there is no initialization and no post, semi-colon may be omitted entirely.
+```go
+for condition {
+    //
+}
+```
+
+This is an infinite loop in go
+```go
+for {
+    //
+}
+// although the body of the loop may have logic to terminate the loop - break or return.
+```
+
+The blank
+identifier may be used whenever syntax requires a variable name but program logic does not,
+for instance to discard an unwanted loop index when we require only the element value. Most
+Go programmers would likely use range and _ to write the echo program as above, since the
+indexing over os.Args is implicit, not explicit, and thus easier to get right
+
+8. Ways to declare a variable
+```go
+s := ""
+var s string
+var s = ""
+var s string = ""
+```
+In practice, you should generally
+use one of the first two forms, with explicit initialization to say that the initial value is
+important and implicit initialization to say that the initial value doesn’t matter.
