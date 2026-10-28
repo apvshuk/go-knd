@@ -9,3 +9,5 @@ Why is it special for me? __Because this is the exact day I was born!__
 def. How one structures and writes programs.
 1. Procedural programming - you write a program as a sequence of instructions,
 organized into procedures (functions).
+
+continue learning c vs go and various programming paradigms.
