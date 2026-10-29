@@ -118,3 +118,28 @@ zero value is nil. For basic types, it is a non-nil default (like 0 or "").
  - size is fixed at compile time; cannot grow   Dynamic; grows automatically when element added
 
 
+11. os package in GO
+os.Args is a string slice.
+os.Args[0] is the name of the program
+os.Args[1 onwards] are the words written in the command line.
+```bash
+$ go run file_name.go hello world
+```
+Here os.Args[1] = hello; os.Args[2] = world and so on if more cmd arguments!
+
+```bash
+apvshuk@computer:~/Documents/go-knd/exercises$ go run 1.2.go hello world hey world
+0 /tmp/go-build3581099105/b001/exe/1.2
+1 hello
+2 world
+3 hey
+4 world
+```
+This is the output of exercise 1.2; which was to print index and value of each element of
+os.Args.
+Notice that the first element is the location/name of the program running; ensuing elements
+are the command line arguments; one word is each element.
+
+
+
+
