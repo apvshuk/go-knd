@@ -105,3 +105,16 @@ var s string = ""
 In practice, you should generally
 use one of the first two forms, with explicit initialization to say that the initial value is
 important and implicit initialization to say that the initial value doesn’t matter.
+
+
+9. Every variable in Go is automatically initialized to a default state called its zero value
+when declared without an initial value. For reference types, pointers, and interfaces, that
+zero value is nil. For basic types, it is a non-nil default (like 0 or "").
+
+
+10. Array vs Slice in GOLANG
+**Array**                                       **Slice**
+ - size is explicit: [5]int                     size is blank: []int
+ - size is fixed at compile time; cannot grow   Dynamic; grows automatically when element added
+
+
